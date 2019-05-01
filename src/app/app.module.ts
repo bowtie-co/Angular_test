@@ -19,7 +19,6 @@ import { LoginComponent } from './molecules/login/login.component';
 import { UserComponent } from './ecosystems/user/user.component';
 import { UserCardComponent } from './molecules/user-card/user-card.component';
 
-
 @NgModule({
   declarations: [
     AppComponent,

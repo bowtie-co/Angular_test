@@ -11,16 +11,16 @@ export class DataService {
 
   getUsers() {
     return new Promise((resolve, rej) => {
-      this.http.get('https://reqres.in/api/users').subscribe(({ data }) => {
-        resolve(data)
+      this.http.get('https://reqres.in/api/users').subscribe(resp => {        
+        resolve(resp['data'])
       })
     })
   }
 
   getUser(id) {
     return new Promise((resolve, rej) => {
-      this.http.get(`https://reqres.in/api/users/${id}`).subscribe(({ data }) => {
-          resolve(data)
+      this.http.get(`https://reqres.in/api/users/${id}`).subscribe(resp => {
+          resolve(resp['data'])
         })
     })
 
