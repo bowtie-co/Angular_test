@@ -1,0 +1,20 @@
+<!-- class binding to change styles -->
+
+<!-- 
+  class is for individual class binding.
+  ngClass is used for multiple classes. accepts an object.
+-->
+<h1 [style.color]="h1Style ? 'gray' : 'black'"  class="thing">Home</h1>
+
+<!-- Contional logic goes in the html attribute? -->
+<ul *ngIf="users">
+  <li *ngFor="let user of users">
+    <a routerLink="/user/{{ user.id }}">
+      <molecule-user-card [user]="user"></molecule-user-card>
+    </a>
+  </li>
+</ul>
+
+<atom-button [onClick]="handleClick">this is a button</atom-button>
+<molecule-search-input [handleClick]="handleClick" [search]="search"></molecule-search-input>
+
